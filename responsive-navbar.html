@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigationbar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat&family=Nunito:ital@1&family=PT+Serif:ital@1&display=swap"
+        rel="stylesheet">
+
+
+    <Style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Nunito', sans-serif;
+        }
+
+        body {
+            background-image: url('https://plus.unsplash.com/premium_photo-1669888350653-5ff0e25fcf76?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyMHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60');
+            background-size: cover;
+            background-repeat: no-repeat;
+            /* background-position: ; */
+            margin:0;
+            padding:0;
+        }
+
+        #main {
+            width: 100%;
+            height: 100px;
+            border: 2px solid black;
+            padding-left:3%;
+            padding-right:3%;
+            padding-bottom:20px;    
+            background-color:rgba(0, 0, 0, 0.8);
+            display: flex;
+            justify-content: space-between;
+            align-items:end;
+            /* margin-top:0px; */
+            position: sticky;
+            top: -25px;
+
+        }
+
+        #check-in{
+            display: none;
+        }
+
+        #manu-btn1{
+            position:absolute;
+            top:30px;
+            left:90%;
+            font-size: 30px;
+            color:white;
+            display: none;
+        }
+
+        #manu-btn2{
+            position:absolute;
+            top:30px;
+            left:90%;
+            font-size: 30px;
+            color:white;
+            display: none;
+        }
+
+    
+
+        #manu-close{
+            display:none
+        }
+
+        #logo{
+            font-size: 30px;
+            font-weight:bolder;
+            /* color:chocolate; */
+            color:red;
+            /* color:black; */
+            /* text-shadow: 3px -2px 1px rgb(167, 53, 53); */
+            text-shadow: 3px -4px 1px rgb(167, 53, 53);
+            /* background-color: rgba(248, 237, 237, 0.5); */
+            /* border-radius: 10%; */
+        }
+
+        #navbar{
+            width:70%;
+            list-style: none;
+            display: flex;
+            /* justify-content: space-evenly; */
+            justify-content: space-around;
+            
+        }
+
+        #navbar li a{
+            font-size: 20px;
+            font-weight:bolder;
+            /* color:black; */
+            color:white;
+            /* text-shadow: 2px -2px 1px rgb(167, 53, 53); */
+            text-decoration: none;
+            letter-spacing: 1.5px;
+            text-transform: capitalize;
+            text-align: center;
+
+        }
+
+        #navbar li{
+            padding:8px 8px 8px 8px;
+            border-radius: 10px;
+        }
+
+        #navbar li:hover{
+            background-color: rgb(90, 226, 90);
+            /* color:darkblue */
+        }
+
+        @media(max-width:1242px){
+            #logo{
+                font-size:25px;
+                padding-bottom: 7px;
+                z-index: 3;
+            }
+
+            #navbar li a{
+                font-size: 15px;
+            }
+
+            #navbar{
+                width:75%;
+            }
+
+        }
+
+        @media(max-width:976px){
+            #logo{
+                font-size:20px;
+                padding-bottom: 7px;
+            }
+
+            #navbar li a{
+                font-size: 12px;
+            }
+
+            #navbar{
+                width:80%;
+            }
+
+        }
+
+        @media(max-width:786px){
+            #logo{
+                font-size:18px;
+            }
+
+            #navbar li a{
+                font-size: 8px;
+            }
+
+            #navbar{
+                width:80%;
+            }
+
+        }
+
+      
+
+        @media(max-width:746px){
+            #navbar{
+                width:100%;
+                height:auto;
+                background-color: rgba(34, 32, 32, 0.4);
+                display: block;
+                padding-left: 35%;
+                padding-right: 35%;
+                position:absolute;
+                top:90px;
+                left:0;
+                text-align: center;
+                display:none;
+            }
+
+            #logo{
+                font-size:35px;
+            }
+
+            #navbar li{
+                margin:10px;
+            }
+
+            #navbar li a{
+                font-size: 20px;
+                text-decoration: none;
+                color:white;
+                text-transform:capitalize;
+            }
+
+            #manu-btn1{
+                display: block;
+            }
+
+            #check-in:checked ~ #navbar{
+                display: block;
+            }
+
+            /* #check-in:checked ~ #manu-btn2{
+                display: block;
+            }
+
+            #check-in:checked ~ #manu-btn1{
+                display: none;
+            } */
+
+        }
+
+        /* =================================logo design=========================================== */
+/* 
+        #logo-div img{
+            width:250px;
+            height:80px;
+            background-color: blue;
+
+            position:absolute;
+            left: 30px;
+            z-index:-1;
+        } */
+
+       
+        
+
+
+
+    </Style>
+</head>
+
+<body>
+    <nav id="main">
+        <input type="checkbox" name="bars" id="check-in">
+         <label for="check-in" id="manu-btn1">
+            <i class="fa-solid fa-bars"></i>
+            <!-- <i class="fa-solid fa-xmark" id="manu-close"></i> -->
+        </label>
+
+        <label for="check-in" id="manu-btn2">
+            <!-- <i class="fa-solid fa-bars" id="manu-open"></i> -->
+            <i class="fa-solid fa-xmark"></i>
+        </label>
+        
+            <label for="" id="logo">Flowershop.com</label>
+        
+       
+        <ul id="navbar">
+            <li><a href="responsive-navigation.html"></i>home</a></li>
+            <li><a href="symbol-changing.html"></i>flower</a></li>
+            <li><a href="login.html"></i>price</a></li>
+            <li><a href="image-changing-checkbox.html">about us</a></li>
+            <li><a href="login.html">login</a></li>
+        </ul>
+    </nav>
+    <div id="hero"></div>
+
+
+
+</body>
+
+</html>
